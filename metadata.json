@@ -1,0 +1,6 @@
+{
+  "name": "비주얼 VBA 웹 에디터",
+  "description": "사내 오프라인(폐쇄망) 환경을 위한 Low-Code 비주얼 VBA 웹 에디터 플랫폼 및 PRD 가이드",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

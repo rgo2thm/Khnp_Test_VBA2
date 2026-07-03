@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-vba-bg: #020617;
+  --color-vba-surface: #0f172a;
+  --color-vba-border: #1e293b;
+  --color-vba-accent: #3b82f6;
+  --color-vba-text-dim: #94a3b8;
+  --color-vba-sidebar: #041329;
+}
+
+/* Dot Grid Pattern for Canvas */
+.dot-grid {
+  background-image: radial-gradient(circle, #1e293b 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Glassmorphism effects */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Global scrollbars for professional IDE Theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* Neon Glow for Active Elements */
+.active-glow {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.25);
+  border-color: #3b82f6;
+}
+
+/* Global overrides for editor input controls to prevent white panels */
+#app_master_root input[type="text"],
+#app_master_root input[type="number"],
+#app_master_root select,
+#app_master_root textarea {
+  background-color: #020617 !important;
+  color: #f8fafc !important;
+  border-color: #1e293b !important;
+}
+
+#app_master_root input[type="text"]:focus,
+#app_master_root input[type="number"]:focus,
+#app_master_root select:focus,
+#app_master_root textarea:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4) !important;
+  outline: none !important;
+}
