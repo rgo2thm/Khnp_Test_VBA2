@@ -465,6 +465,36 @@ export default function App() {
         )}
       </main>
 
+      {/* Footer Status Bar (Professional IDE layout) */}
+      <footer className="h-10 bg-vba-sidebar text-vba-text-dim px-6 flex items-center justify-between text-[11px] shrink-0 border-t border-vba-border select-none font-mono">
+        <div className="flex items-center space-x-6">
+          <div className="flex items-center text-emerald-400">
+            <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
+            READY (SNAP 8)
+          </div>
+          <div className="h-3 w-px bg-vba-border"></div>
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="h-3.5 w-3.5 text-blue-500" />
+            <span>로컬 브라우저 세션 컴파일 (외부 유출 걱정 없음)</span>
+          </div>
+        </div>
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 text-vba-text-dim">
+            <span>X: <span className="text-white font-semibold">{selectedElementId && elements.find(el => el.id === selectedElementId)?.left !== undefined ? `${elements.find(el => el.id === selectedElementId)?.left}px` : '0px'}</span></span>
+            <span>Y: <span className="text-white font-semibold">{selectedElementId && elements.find(el => el.id === selectedElementId)?.top !== undefined ? `${elements.find(el => el.id === selectedElementId)?.top}px` : '0px'}</span></span>
+          </div>
+          <button
+            onClick={handleResetAll}
+            className="bg-blue-600/10 text-blue-400 border border-blue-500/30 px-4 py-1 rounded text-[10px] font-bold hover:bg-blue-600 hover:text-white transition-all uppercase tracking-widest cursor-pointer"
+          >
+            프로젝트 완전 초기화
+          </button>
+          <div className="text-[10px] uppercase text-vba-text-dim">
+            KOREA ENTERPRISE SOLUTION | v1.0.4-CLUB
+          </div>
+        </div>
+      </footer>
+
       {/* 4. Reset Confirmation Modal */}
       <AnimatePresence>
         {showResetConfirm && (
